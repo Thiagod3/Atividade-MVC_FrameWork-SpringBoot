@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC ES3</title>
+</head>
+<body>
+<h1>Lista de Ruas</h1>
+<hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th> Logadrouro</th>
+                <th> CEP </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="rua:${ruas}">
+                <td th:text="${rua.logradouro}">Logradouro</td>
+                <td th:text="${rua.cep}">CEP</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
